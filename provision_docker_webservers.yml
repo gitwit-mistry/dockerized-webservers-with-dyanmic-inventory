@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  roles:
+    - docker-webserver-role
+
+- hosts: docker_containers
+  tasks:
+    - command: ifconfig eth0 
+
